@@ -12,7 +12,8 @@ int yes(int num, int n, int* arr) {
 int main(int argc, char** argv) {	
 	int n, num;
 	cin >> n;
-	int* arr = new int[n];		// 动态申请数组
+	// int* arr = new int[n];		// 动态申请数组
+	int arr[n];
 	for (int i = 0; i < n; i++)	cin >> arr[i];
 	cin >> num;
 	cout << yes(num, n, arr);

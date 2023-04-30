@@ -4,7 +4,7 @@ using namespace std;
 
 int zhishu(int x) {
     for (int i = 2; i * i <= x; i++) {
-        if (x % i == 0) return 0;
+        if (!(x % i)) return 0;
     }
     return 1;
 }
@@ -14,7 +14,7 @@ int huiwen(int x) {
     int s = x / 10 % 10;
     int q = x / 1000 % 10;
     int w = x / 10000;
-    if (g==w && s==q)   return 1;
+    if (g == w && s ==q)   return 1;
     return 0;
 }
 
@@ -26,7 +26,7 @@ int main() {
             cout << a;
             break;
         }
-    }
+    } // 继续刚才的循环
     for (a++ ; a <= b; a++) {
         if (zhishu(a) && huiwen(a)) cout << " " << a;
     }
