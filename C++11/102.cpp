@@ -4,11 +4,11 @@
 using namespace std;
 
 int main() {
-    int a, b, c, t;
+    double a, b, c, t;
     cin >> a >> b >> c >> t;
 
-    double t1 = (1 - (1 / (double)a + 1 / (double)b) * t) / (1 / (double)a + 1 / (double)b - 1 / (double)c);
-    cout << fixed << setprecision(2) << (double)t + t1 << endl;
+    double t1 = (1 - (1 / a + 1 / b) * t) / (1 / a + 1 / b - 1 / c);
+    cout << fixed << setprecision(2) << t + t1 << endl;
 
-    return 0;   
+    return 0;
 }
