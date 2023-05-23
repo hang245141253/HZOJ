@@ -2,20 +2,21 @@
 
 using namespace std;
 
-int zhishu(int x) {
+bool zhishu(int x) {
     for (int i = 2; i * i <= x; i++) {
-        if (!(x % i)) return 0;
+        if (!(x % i)) return false;
     }
-    return 1;
+    return true;
 }
 
-int huiwen(int x) {
-    int g = x % 10;
-    int s = x / 10 % 10;
-    int q = x / 1000 % 10;
-    int w = x / 10000;
-    if (g == w && s ==q)   return 1;
-    return 0;
+bool huiwen(int x) {
+    if (__builtin_expect(!!(x < 0), 0)) return false;
+    int y = 0, z = x;
+    while (x) {
+        y = y * 10 + x % 10;
+        x /= 10;
+    }
+    return z == y;
 }
 
 int main() {
@@ -30,5 +31,6 @@ int main() {
     for (a++ ; a <= b; a++) {
         if (zhishu(a) && huiwen(a)) cout << " " << a;
     }
+
     return 0;   
 }
