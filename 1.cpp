@@ -12,7 +12,7 @@ void init(int* arr, int r) {
 
 int min_index(int *arr, int l) {
     for (int i = 1; i <= arr[0]; i++) {
-        if (arr[i] == l) return i;
+        if (arr[i] >= l) return i;
     }
     return -1;
 }
@@ -23,11 +23,9 @@ int main() {
     int *arr = new int[r + 1]();
     init(arr, r);
 
-    for (int i = 1; i <= arr[0]; i++) {
+    for (int i = min_index(arr, l); i <= arr[0]; i++) {
         printf("arr[%d] = %d\n", i, arr[i]);
     }
-    printf("%d", min_index(arr, l));
-
 
     return 0;
 }
