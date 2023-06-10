@@ -7,7 +7,6 @@ int main() {
     cin >> m1 >> m2;
     cin >> l1 >> l2;
 
-    bool flag;
     if (m1 - l1 == (char)-10 || m1 - l1 == (char)-7 || m1 - l1 == (char)17) {
         if (m1 - l2 == (char)-10 || m1 - l2 == (char)-7 || m1 - l2 == (char)17 || m1 == l2) cout << "MING" << endl;
         else {
