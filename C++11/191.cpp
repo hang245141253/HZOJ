@@ -1,13 +1,13 @@
 #include <cstdio>
 
 void init(int* arr, int r) {
-    for (int i = 2; i <= r; i++) {
-        if (arr[i]) continue;
-        arr[++arr[0]] = i;
-        for (int j = i; j <= r / i; j++) {
-            arr[j * i] = 1;
+    for (int M = 2; M <= r; M++) {
+        if (!arr[M]) arr[++arr[0]] = M;
+        for (int P = 1; P <= arr[0] && arr[P] * M <= r; P++) {
+            arr[arr[P] * M] = 1;
+            if (M % arr[P] == 0) break;
         }
-    }
+    } return ;
 }
 
 int get_index(int *arr, int l) {
@@ -18,7 +18,7 @@ int get_index(int *arr, int l) {
 }
 
 void solve(int *arr, int l) {
-    int min = 0x0fffffff, max = 0;
+    int min = __INT32_MAX__, max = 0;
     int min_index = 0, max_index = 0;
     for (int i = get_index(arr, l); i < arr[0]; i++) {
         if (min > arr[i + 1] - arr[i]) {
@@ -44,6 +44,6 @@ int main() {
     int *arr = new int[r + 1]();
     init(arr, r);
     solve(arr, l);
-    
+    delete(arr);
     return 0;
 }
