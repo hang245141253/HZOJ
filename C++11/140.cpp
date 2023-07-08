@@ -1,30 +1,28 @@
-#include <iostream>
-
-using namespace std;
+#include <cstdio>
 
 int main() {
     int n;
-    cin >> n;
+    scanf("%d", &n);
     char ch = 'A';
 
     for (int i = 1; i <= n; i++, ch++) {
         for (int j = i; j < n; j++) {
-            cout << " ";
+            printf(" ");
         }
-        for (int k = 0; k < (i - 1) * 2 + 1; k++) {   //  (i-1)*2+1 : 1, 3, 5 , ...
-            cout << (char)(ch);
+        for (int k = 0; k < 2 * i - 1; k++) {   //  2 * i - 1 : 1, 3, 5 , ...
+            printf("%c", ch);
         }
-        cout << endl;
+        putchar('\n');
     }
     ch -= 2;
     for (int i = n - 1; i >= 1; i--, ch--) {
         for (int j = i; j < n; j++) {
-            cout << " ";
+            printf(" ");
         }
-        for (int k = 0; k < (i - 1) * 2 + 1; k++) {   //  (i-1)*2+1 : 1, 3, 5 , ...
-            cout << (char)(ch);
+        for (int k = 0; k < 2 * i - 1; k++) {   //  2 * i - 1 : 1, 3, 5 , ...
+            printf("%c", ch);
         }
-        cout << endl;
+        putchar('\n');
     }
-    return 0;   
+    return 0;
 }
