@@ -7,7 +7,7 @@ int main() {
     double a, b, c, t;
     cin >> a >> b >> c >> t;
 
-    double t1 = (1 - (1 / a + 1 / b) * t) / (1 / a + 1 / b - 1 / c);
+    double t1 = (1.0 - (1.0 / a + 1.0 / b) * t) / (1.0 / a + 1.0 / b - 1.0 / c);
     cout << fixed << setprecision(2) << t + t1 << endl;
 
     return 0;
