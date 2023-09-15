@@ -15,6 +15,7 @@ void dfs(int x0, int y0) {
     for (int i = 0; i < 4; i++) {
         int x = dir[i][0] + x0;
         int y = dir[i][1] + y0;
+        // if (x < 0 || y < 0 || x > w || y > h) continue; // 如果从0 0开始，需要判断边界
         if (map[x][y] == '.') {
             ans++;
             map[x][y] = '#';
