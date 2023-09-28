@@ -10,6 +10,18 @@
 using namespace std;
 
 int main() {
+    int x, ans = 0;
+    string n;
+    cin >> x >> n;
+    for (int i = n.length() - 1, bit = 1; i >= 0; i--, bit *= x) {
+        ans += (n[i] - '0') * bit;
+    } cout << ans;
+    return 0;
+}
+
+
+/*
+int main() {
     int x, n, ans = 0;
     cin >> x >> n;
 
@@ -22,4 +34,4 @@ int main() {
 
     cout << ans << endl;
     return 0;
-}
+}*/
