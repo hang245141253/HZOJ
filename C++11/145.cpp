@@ -2,6 +2,21 @@
 using namespace std;
 
 int main() {
+    string ans = "";
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        string tmp;
+        cin >> tmp;
+        if (tmp.length() > ans.length()) 
+            ans = tmp;
+    }
+    cout << ans << endl;
+    return 0;
+}
+
+/* 麻烦写法
+int main() {
     int n;
     cin >> n;
     string *str = new string[n];
@@ -21,6 +36,7 @@ int main() {
     
 	return 0;
 }
+*/
 
 
 /*二维数组解法，C语言风格
