@@ -1,14 +1,19 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-	string str;
-	cin >> str;
+string f(string str) {
 	for (int i = 0; i < str.size(); i++) {
 		if (str[i] > 96)	str[i] -= 32;
 		else				str[i] += 32;
 	}
-	cout << str << endl;
+	return str;
+}
+
+int main() {
+	string str;
+	cin >> str;
+	
+	cout << f(str) << endl;
 	
 	return 0;
 }
