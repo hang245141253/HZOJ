@@ -17,3 +17,22 @@ int main() {
     cout << peach(n);
     return 0;
 }
+
+/**
+递推：
+#include <iostream>
+using namespace std;
+
+int arr[35] = {-1, 1}; // F(n) = k个挑子能吃n天
+
+int main() {
+    for (int i = 2; i <= 30; i++) {
+        arr[i] = (arr[i - 1] + 1) * 2;
+    }
+    int n;
+    cin >> n;
+    cout << arr[n];
+
+    return 0;
+}
+*/
