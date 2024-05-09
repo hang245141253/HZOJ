@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 int main() {
@@ -11,10 +10,12 @@ int main() {
         for (int j = 0; j < i; j++) {
             cout << " ";
         }
-        for (int j = i; j < n + 1; j++) {   // j: 0, 1, 2 ,3
+        // j: 0, 1, 2 ,3
+        for (int j = i; j < n + 1; j++) {
             cout << (char)(ch + j);
         }
-        for (int j = n - 1; j >= i; j--) {  // j: 2, 1, 0
+        // j: 2, 1, 0
+        for (int j = n - 1; j >= i; j--) {
             cout << (char)(ch + j);
         }
         cout << endl;
@@ -23,10 +24,12 @@ int main() {
         for (int j = 0; j < i; j++) {
             cout << " ";
         }
-        for (int j = i; j < n + 1; j++) {   // j: 0, 1, 2 ,3
+        // j: 0, 1, 2 ,3
+        for (int j = i; j < n + 1; j++) {
             cout << (char)(ch + j);
         }
-        for (int j = n - 1; j >= i; j--) {  // j: 2, 1, 0
+        // j: 2, 1, 0
+        for (int j = n - 1; j >= i; j--) {
             cout << (char)(ch + j);
         }
         cout << endl;

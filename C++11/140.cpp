@@ -9,20 +9,22 @@ int main() {
         for (int j = i; j < n; j++) {
             printf(" ");
         }
-        for (int k = 0; k < 2 * i - 1; k++) {   //  2 * i - 1 : 1, 3, 5 , ...
+        //  2 * i - 1 : 1, 3, 5 , ...
+        for (int k = 0; k < 2 * i - 1; k++) {
             printf("%c", ch);
         }
-        putchar('\n');
+        printf("\n");
     }
     ch -= 2;
     for (int i = n - 1; i >= 1; i--, ch--) {
         for (int j = i; j < n; j++) {
             printf(" ");
         }
-        for (int k = 0; k < 2 * i - 1; k++) {   //  2 * i - 1 : 1, 3, 5 , ...
+        //  2 * i - 1 : 1, 3, 5 , ...
+        for (int k = 0; k < 2 * i - 1; k++) {
             printf("%c", ch);
         }
-        putchar('\n');
+        printf("\n");
     }
     return 0;
 }
